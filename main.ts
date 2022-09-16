@@ -128,7 +128,7 @@ game.onUpdate(function () {
 })
 game.onUpdate(function () {
     for (let value of snakebody) {
-        if (!(value == snakebody[0]) && snakehead.overlapsWith(value)) {
+        if (!(value == snakebody[0]) && !(value == snakebody[1]) && snakehead.overlapsWith(value)) {
             game.over(false)
         }
     }
